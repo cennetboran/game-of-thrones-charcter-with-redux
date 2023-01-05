@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMembers } from "../redux/action";
+import { fetchMembers } from "../../redux/action";
 import { useEffect } from "react";
 import MemberCards from "./memberCards";
 export default function MemberLists() {
@@ -10,12 +10,12 @@ export default function MemberLists() {
   useEffect(() => {
     dispatch(fetchMembers());
   }, [dispatch]);
-  console.log(fetchMembers());
+
   return (
     <div>
-      <div className="flex flex-wrap gap-12 justify-center pt-10">
+      <div className="flex flex-wrap gap-12 justify-center pt-10 ">
         {members.map((member) => (
-          <div className="">
+          <div className="" key={member.name}>
             <MemberCards member={member} />
           </div>
         ))}
