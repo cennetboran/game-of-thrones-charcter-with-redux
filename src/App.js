@@ -1,23 +1,43 @@
-import MemberLists from "./component/movieList";
-import Snowfall from "react-snowfall";
-
-import "./App.css";
+import * as React from "react";
 import { Provider } from "react-redux";
-import store from "./redux/store";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./App.css";
+import Got from "./component/got/got";
+import House from "./component/got/house";
 import HomePage from "./component/homepage/homepage";
-import { useState } from "react";
+import Hp from "./component/hp/hp";
+import store from "./redux/store";
+import Root from "./Root";
 
-function App() {
-  const [color, setColor] = useState("#dee4fd");
-  const [snowflakeCount, setSnowflakeCount] = useState(200);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "got",
+        element: <Got />,
+      },
+      {
+        path: "hp",
+        element: <Hp />,
+      },
+      {
+        path: "house",
+        element: <House />,
+      },
+    ],
+  },
+]);
+
+export default function App() {
   return (
-    <div className="App bg-black  h-[1000px]">
-      <Provider store={store}>
-        <Snowfall color={color} snowflakeCount={snowflakeCount} />
-        <HomePage />
-      </Provider>
-    </div>
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   );
 }
-
-export default App;

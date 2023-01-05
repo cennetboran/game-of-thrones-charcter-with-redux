@@ -1,38 +1,44 @@
+import { Link } from "react-router-dom";
+
 export default function HomePage() {
   return (
     <>
-      <a href="/characters">
-        <div className="flex flex-row justify-center items-center pt-20">
-          <div className="flex gap-12">
+      <div className="flex flex-row justify-center items-center pt-20">
+        <div className="flex gap-12">
+          <Link to="/got">
             <div className="basis-6/12">
-              <div class="bamax-w-sm rounded overflow-hidden shadow-lg border">
+              <div className="bamax-w-sm rounded overflow-hidden shadow-lg border border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
                 <img
-                  class="w-full"
-                  src="https://www.sideshow.com/storage/product-images/909724/iron-throne_game-of-thrones_square.jpg"
+                  className="w-full h-96"
+                  src="https://pbs.twimg.com/profile_images/1386711841410359298/Dqme1G0m_400x400.jpg"
                   alt="Sunset in the mountains"
                 />
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2 text-white">
-                    Characters
+                <div className="px-6 py-4">
+                  <div className="font-bold text-xl mb-2 text-white">
+                    Game Of Thrones
                   </div>
                 </div>
               </div>
             </div>
+          </Link>
+          <Link to="/hp">
             <div className="basis-6/12">
-              <div class="max-w-sm rounded overflow-hidden shadow-lg border">
+              <div className="max-w-sm rounded overflow-hidden shadow-lg border border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
                 <img
-                  class="w-full"
-                  src="https://pyxis.nymag.com/v1/imgs/028/c95/9998bd19a44092f589f7cf53281bc738bf-28-got-questions.rsquare.w700.jpg"
+                  className="w-full "
+                  src="https://pbs.twimg.com/profile_images/498202852624330752/kUeefRWm_400x400.jpeg"
                   alt="Sunset in the mountains"
                 />
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2 text-white">House</div>
+                <div className="px-6 py-4">
+                  <div className="font-bold text-xl mb-2 text-white pt-9">
+                    Harry Potter
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
-      </a>
+      </div>
     </>
   );
 }
