@@ -22,7 +22,7 @@ export default function Got() {
                 </div>
               </div>
             </Link>
-            <Link to="/hp">
+            <Link to="/characters">
               <div className="basis-6/12">
                 <div className="max-w-sm  overflow-hidden shadow-lg  border border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
                   <img

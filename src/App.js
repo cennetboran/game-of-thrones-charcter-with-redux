@@ -2,6 +2,7 @@ import * as React from "react";
 import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
+import Characters from "./component/got/characters";
 import Got from "./component/got/got";
 import House from "./component/got/house";
 import HomePage from "./component/homepage/homepage";
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "house",
         element: <House />,
+      },
+      {
+        path: "characters",
+        element: <Characters />,
       },
     ],
   },
