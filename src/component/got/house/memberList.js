@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMembers } from "../../redux/action";
+import { fetchMembers } from "../../../redux/action";
 import { useEffect } from "react";
 import MemberCards from "./memberCards";
 export default function MemberLists() {

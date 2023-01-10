@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchCharacters } from "../../redux/action";
+import { fetchCharacters } from "../../../redux/action";
 import React, { useState } from "react";
 
 export default function Characters() {
@@ -36,13 +36,6 @@ export default function Characters() {
                       : "No house information available"}
                   </div>
                   <p class="text-black text-base">
-                    {/* {(character?.quotes || []).map((quotes, index) => {
-                      return (
-                        <div className="text-black " key={index}>
-                          {quotes}
-                        </div>
-                      );
-                    })} */}
                     {isExpanded
                       ? character.quotes
                       : `${character.quotes.slice(0, 1)}...`}
