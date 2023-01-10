@@ -9,6 +9,8 @@ import HomePage from "./component/homepage/homepage";
 import Hp from "./component/hp/hp";
 import store from "./redux/store";
 import Root from "./Root";
+import Spells from "./component/hp/spells";
+import AllCharacter from "./component/hp/AllCharacter";
 
 const router = createBrowserRouter([
   {
@@ -27,13 +29,22 @@ const router = createBrowserRouter([
         path: "hp",
         element: <Hp />,
       },
+
       {
         path: "house",
         element: <House />,
       },
       {
+        path: "allCharacter",
+        element: <AllCharacter />,
+      },
+      {
         path: "characters",
         element: <Characters />,
+      },
+      {
+        path: "spells",
+        element: <Spells />,
       },
     ],
   },

@@ -28,6 +28,32 @@ const fetchCharacterFailure = (error) => ({
   payload: error,
 });
 
+const fetchStudentRequest = () => ({
+  type: types.FETCH_STUDENT_REQUEST,
+});
+
+const fetchStudentSuccess = (students) => ({
+  type: types.FETCH_STUDENT_SUCCESS,
+  payload: students,
+});
+
+const fetchStudentFailure = (error) => ({
+  type: types.FETCH_STUDENT_FAILURE,
+  payload: error,
+});
+const fetchSpellsRequest = () => ({
+  type: types.FETCH_SPELLS_REQUEST,
+});
+
+const fetchSpellsSuccess = (spells) => ({
+  type: types.FETCH_SPELLS_SUCCESS,
+  payload: spells,
+});
+
+const fetchSpellsFailure = (error) => ({
+  type: types.FETCH_SPELLS_FAILURE,
+  payload: error,
+});
 export function fetchMembers() {
   return function (dispatch) {
     dispatch(fetchMembersRequest());
@@ -54,6 +80,36 @@ export function fetchCharacters() {
       })
       .catch((error) => {
         dispatch(fetchCharacterFailure(error));
+      });
+  };
+}
+export function fetchStudents() {
+  return function (dispatch) {
+    dispatch(fetchStudentRequest());
+    axios
+      .get("https://hp-api.onrender.com/api/characters")
+      .then((response) => {
+        const student = response.data;
+        dispatch(fetchStudentSuccess(student));
+        console.log(response);
+      })
+      .catch((error) => {
+        dispatch(fetchStudentFailure(error));
+      });
+  };
+}
+export function fetchSpells() {
+  return function (dispatch) {
+    dispatch(fetchSpellsRequest());
+    axios
+      .get("https://hp-api.onrender.com/api/spells")
+      .then((response) => {
+        const spells = response.data;
+        dispatch(fetchSpellsSuccess(spells));
+        console.log(response);
+      })
+      .catch((error) => {
+        dispatch(fetchSpellsFailure(error));
       });
   };
 }
