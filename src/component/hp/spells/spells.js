@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchSpells } from "../../redux/action";
+import { fetchSpells } from "../../../redux/action";
 import SpellsCard from "./spellsCard";
 
 export default function Spells() {

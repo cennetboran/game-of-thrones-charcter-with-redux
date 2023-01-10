@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchStudents } from "../../redux/action";
+import { fetchStudents } from "../../../redux/action";
 import { useEffect } from "react";
 import HpCards from "./hpCards";
 export default function HpList() {
