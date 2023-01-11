@@ -1,5 +1,9 @@
 # Game of thrones and Harry potter API With Redux
 
+## Demo -> https://game-of-thrones-charcter-with-redux.vercel.app/
+
+
+![image](https://user-images.githubusercontent.com/40943224/211768592-de5b7273-f281-4070-8041-47fcb2b24716.png)
 
 
 ## Available Script
